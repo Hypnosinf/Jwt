@@ -1,0 +1,14 @@
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\bin\Debug\netcoreapp2.2\WebApiPaises.deps.json
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\bin\Debug\netcoreapp2.2\WebApiPaises.runtimeconfig.json
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\bin\Debug\netcoreapp2.2\WebApiPaises.runtimeconfig.dev.json
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\bin\Debug\netcoreapp2.2\WebApiPaises.dll
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\bin\Debug\netcoreapp2.2\WebApiPaises.pdb
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.csproj.CoreCompileInputs.cache
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.RazorAssemblyInfo.cache
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.RazorAssemblyInfo.cs
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.AssemblyInfoInputs.cache
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.AssemblyInfo.cs
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.RazorTargetAssemblyInfo.cache
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.dll
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.pdb
+D:\jrojas\Proyectos\.NetCore2.2\WebApiPaises\WebApiPaises\obj\Debug\netcoreapp2.2\WebApiPaises.csprojAssemblyReference.cache
