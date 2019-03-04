@@ -26,11 +26,24 @@ namespace WebApiPaises
             Configuration = configuration;
         }
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:8080"
+                                        ).AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
+
             services.AddDbContext<Models.ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));//creamos db pasamos confiuraciones ApplicationDb...
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
@@ -68,14 +81,18 @@ namespace WebApiPaises
         {
             if (env.IsDevelopment())
             {
+                //app.UseCors("AllowAll");
                 app.UseDeveloperExceptionPage();
+                
             }
             else
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+               
                 app.UseHsts();
             }
 
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseMvc();
@@ -103,5 +120,29 @@ namespace WebApiPaises
 
 
         }
-    }
+
+        //private void ConfigureServicesForCors(IServiceCollection services)
+        //{
+        //    services.AddCors(options => options.AddPolicy("AllowAll", builder =>
+        //    {
+        //        builder
+        //            //.WithOrigins("http://localhost:8080") //AllowSpecificOrigins;  
+        //            //.WithOrigins("http://localhost:4456", "http://localhost:4457") //AllowMultipleOrigins;  
+        //            .AllowAnyOrigin() //AllowAllOrigins;  
+        //                              //.WithMethods("GET") //AllowSpecificMethods;  
+        //                              //.WithMethods("GET", "PUT") //AllowSpecificMethods;  
+        //                              //.WithMethods("GET", "PUT", "POST") //AllowSpecificMethods;  
+        //                              //.WithMethods("GET", "PUT", "POST", "DELETE") //AllowSpecificMethods;  
+        //            .AllowAnyMethod() //AllowAllMethods;  
+        //                              //.WithHeaders("Accept", "Content-type", "Origin", "X-Custom-Header"); //AllowSpecificHeaders;  
+        //            .AllowCredentials()
+        //            .AllowAnyHeader(); //AllowAllHeaders;  
+        //    })
+        //    );
+
+
+
+        //}
+
+        }
 }
